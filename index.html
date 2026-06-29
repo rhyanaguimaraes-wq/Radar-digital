@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            color: #183C63;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        article{
+            display: flex;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Radar Digital</h1>
+        <p>O que é novidade hoje, na sua tela agora.</p>
+    </header>
+    <main>
+        <article>
+            <img src="images-blog.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+            <div>
+                <h2>Como viemos parar aqui? A tecnologia hoje (e o início do Radar Digital)</h2>
+                <p class="artigo-autor">Por: Rhyana Guimarães</p>
+                <p>Da internet discada à Inteligência Artificial em segundos: a tecnologia evoluiu mais rápido do que a gente imaginava. O futuro já está acontecendo agora.
+
+É para rastrear e descomplicar esse universo que nasce o Radar Digital. Seu novo ponto de encontro para entender as maiores tendências, gadgets e inovações de um jeito simples e direto.
+
+O sinal foi ligado. Bem-vindo a bordo! 📡✨</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="images-blog.png"
+                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
+            <div>
+                <h2>O Boom da IA: Até onde a tecnologia pode chegar?</h2>
+                <p class="artigo-autor">Por: Rhyana Guimarães</p>
+                <p>De assistentes de voz a ferramentas capazes de criar textos, imagens e códigos em segundos, a Inteligência Artificial deixou de ser uma promessa futurista para se tornar parte do nosso dia a dia. Mas a velocidade dessa evolução deixa uma pergunta no ar: qual é o limite?
+
+Enquanto uns enxergam a IA como a maior aliada da produtividade humana, outros olham com desconfiança para os impactos no mercado de trabalho e na privacidade. O fato é que não há mais como voltar atrás. O desafio agora não é apenas criar a tecnologia, mas aprender a evoluir junto com ela.
+
+E para você: a Inteligência Artificial veio para facilitar a nossa vida ou para nos substituir? Deixe sua opinião nos comentários! 🤖💡</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    })
+
+
+</script>
+
+</html>
